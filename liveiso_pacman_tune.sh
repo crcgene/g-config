@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-pacman -S --noconfirm  pacman-contrib 
+pacman -S --noconfirm  pacman-contrib gnupg
 pacman-key --recv-keys F3B607488DB35A47 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key F3B607488DB35A47 
 pacman -U --noconfirm \
