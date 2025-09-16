@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_PATH="$(realpath "${BASH_SOURCE[0]:-$0}")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 echo "SCRIPT_DIR = $SCRIPT_DIR"
 
 pacman -S --noconfirm  pacman-contrib gnupg
