@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-echo "\$0 = $0"
-echo "\${BASH_SOURCE[0]} = ${BASH_SOURCE[0]}"
-ls -l "$0" 2>&1
-ls -l "${BASH_SOURCE[0]}" 2>&1
+printf '$0 = %s\n' "$0"
+printf 'BASH_SOURCE[0] = %s\n' "${BASH_SOURCE[0]}"
 
 SCRIPT_PATH="$(realpath "${BASH_SOURCE[0]:-$0}")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
