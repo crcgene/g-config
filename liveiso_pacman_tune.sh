@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+echo "SCRIPT_DIR = $SCRIPT_DIR"
 
 pacman -S --noconfirm  pacman-contrib gnupg
 gpg --list-keys #gnupg init
